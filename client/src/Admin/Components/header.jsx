@@ -16,19 +16,29 @@ export default function Header({ toggleSidebar }) {
 
   return (
     <header className="w-full fixed top-0 left-0 bg-gradient-to-r from-[#63a6dd] via-[#63a6dd] to-[#00C999] text-white shadow-md z-50 flex items-center justify-between px-6 py-4">
-      {/* ✅ Logo อยู่ด้านซ้าย */}
-      <div className="flex items-center">
-        <Link to="/Home" className="flex items-center gap-2 text-white">
-          <img
-            src={LogoADCM}
-            alt="ADC Microsystems"
-            className="h-12 sm:h-14 md:h-16 lg:h-16 xl:h-16 w-auto object-cover cursor-pointer"
-          />
-        </Link>
-      </div>
+      {/* ✅ ปุ่ม Toggle Sidebar สำหรับมือถือ */}
+      <button
+        onClick={toggleSidebar}
+        className="md:hidden p-2 bg-gray-700 text-white rounded"
+        aria-controls="sidebar"
+        aria-expanded="false"
+      >
+        <Menu size={24} />
+      </button>
+
+      {/* ✅ Logo อยู่ตรงกลางที่ sm และอยู่ซ้ายที่ md ขึ้นไป */}
+  <div className="sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:flex sm:justify-center sm:w-full md:relative md:left-20 md:transform-none ml-4 md:ml-6">
+    <Link to="/Home" className="flex items-center gap-2 text-white">
+      <img
+        src={LogoADCM}
+        alt="ADC Microsystems"
+        className="h-12 sm:h-14 md:h-16 lg:h-16 xl:h-16 w-auto object-cover cursor-pointer"
+      />
+    </Link>
+  </div>
 
       {/* ✅ "ระบบคลังสินค้า" อยู่ตรงกลางในขนาด md ขึ้นไป */}
-      <h1 className="hidden md:block absolute left-1/2 transform -translate-x-1/2 text-xl md:text-3xl font-bold text-white drop-shadow-lg">
+      <h1 className="hidden md:block absolute left-1/2 transform -translate-x-1/2 text-xl md:text-4xl font-bold text-white drop-shadow-lg">
         ระบบคลังสินค้า
       </h1>
 

@@ -24,11 +24,11 @@ const AboutUs = () => {
             ในการพัฒนาโซลูชันด้าน IT อย่างต่อเนื่อง เพื่อยกระดับขีดความสามารถขององค์กร
           </p>
         </div>
-        <img
+        {/* <img
           src="https://source.unsplash.com/500x300/?technology,office"
           alt="Company Image"
           className="rounded-lg shadow-lg"
-        />
+        /> */}
       </section>
 
       {/* 🔹 Section: Vision */}
@@ -42,11 +42,11 @@ const AboutUs = () => {
             พร้อมเป็นผู้นำด้านนวัตกรรมเทคโนโลยีดิจิทัลในระดับประเทศและภูมิภาค
           </p>
         </div>
-        <img
+        {/* <img
           src="https://source.unsplash.com/500x300/?innovation,technology"
           alt="Vision Image"
           className="rounded-lg shadow-lg"
-        />
+        /> */}
       </section>
     </div>
   );
